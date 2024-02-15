@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXFilterComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.mfxresources.fonts.MFXFontIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<HBox alignment="CENTER" prefHeight="750.0" prefWidth="930.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.arakviel.carrepair.presentation.controller.employee.EmployeeAddEditController">
+  <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" maxWidth="600.0" HBox.hgrow="ALWAYS">
+         <content>
+          <GridPane hgap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" vgap="5.0">
+            <columnConstraints>
+              <ColumnConstraints hgrow="NEVER" maxWidth="200.0" minWidth="-Infinity" prefWidth="200.0" />
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints vgrow="NEVER" />
+              <RowConstraints valignment="CENTER" vgrow="NEVER" />
+                  <RowConstraints />
+            </rowConstraints>
+            <children>
+              <Label text="Адреса*:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="0" />
+              <MFXFilterComboBox fx:id="addressComboBox" floatMode="ABOVE" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+              <Label fx:id="addressErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      
+                                <Label text="Відділ*:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+              <MFXFilterComboBox fx:id="workroomComboBox" floatMode="ABOVE" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+              <Label fx:id="workroomErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      
+                                <Label text="Посада*:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+              <MFXFilterComboBox fx:id="positionComboBox" floatMode="ABOVE" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+              <Label fx:id="positionErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      
+                        
+                                <Label text="Ім'я*:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+              <MFXTextField fx:id="firstNameTextField" floatMode="DISABLED" maxWidth="1.7976931348623157E308" promptText="Іван" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+              <Label fx:id="firstNameErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+      
+                                <Label text="Прізвище*:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="8" />
+              <MFXTextField fx:id="lastNameTextField" floatMode="DISABLED" maxWidth="1.7976931348623157E308" promptText="Мельник" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+              <Label fx:id="lastNameErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
+      
+                                <Label text="По батькові:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="10" />
+              <MFXTextField fx:id="middleNameTextField" floatMode="DISABLED" maxWidth="1.7976931348623157E308" promptText="Іванович" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+              <Label fx:id="middleNameErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="11" />
+      
+                                <Label text="Фото*:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="12" />
+              <MFXButton fx:id="photoButton" onAction="#onPhotoButtonClick" prefHeight="26.0" prefWidth="53.0" text="..." GridPane.columnIndex="1" GridPane.rowIndex="12" />
+              <ImageView fx:id="photoImageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+              <Label fx:id="photoErrorLabel" managed="false" styleClass="error-label" text="error" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="14" />
+      
+                                <Label text="Скан паспорта (PDF)*:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="15" />
+              <MFXButton fx:id="passportDocCopyButton" onAction="#onPassportDocCopyClick" prefHeight="26.0" prefWidth="53.0" text="..." GridPane.columnIndex="1" GridPane.rowIndex="15" />
+              <Label fx:id="passportDocCopyErrorLabel" managed="false" styleClass="error-label" text="error" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="16" />
+              <Label fx:id="passportDocCopyLabel" layoutX="90.0" layoutY="451.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="15">
+                <GridPane.margin>
+                  <Insets left="60.0" />
+                </GridPane.margin>
+              </Label>
+      
+                                <Label text="Скан РКНП (PDF):" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="17" />
+              <MFXButton fx:id="bankNumberDocCopyButton" onAction="#onBankNumberDocCopyClick" prefHeight="26.0" prefWidth="53.0" text="..." GridPane.columnIndex="1" GridPane.rowIndex="17" />
+              <Label fx:id="bankNumberDocCopyErrorLabel" managed="false" styleClass="error-label" text="error" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="18" />
+              <Label fx:id="bankNumberDocCopyLabel" layoutX="280.0" layoutY="451.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="17">
+                <GridPane.margin>
+                  <Insets left="60.0" />
+                </GridPane.margin>
+              </Label>
+      
+                                <Label text="Скан додатково документу (PDF):" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="19" />
+              <MFXButton fx:id="otherDocCopyButton" onAction="#onOtherDocCopyClick" prefHeight="26.0" prefWidth="53.0" text="..." GridPane.columnIndex="1" GridPane.rowIndex="19" />
+              <Label fx:id="otherDocCopyErrorLabel" managed="false" styleClass="error-label" text="error" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="20" />
+              <Label fx:id="otherDocCopyLabel" layoutX="280.0" layoutY="487.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="19">
+                <GridPane.margin>
+                  <Insets left="60.0" />
+                </GridPane.margin>
+              </Label>
+      
+                                <Label text="Email*:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="21" />
+              <MFXTextField fx:id="emailTextField" floatMode="DISABLED" maxWidth="1.7976931348623157E308" promptText="ivan@gmail.com" GridPane.columnIndex="1" GridPane.rowIndex="21" />
+              <Label fx:id="emailErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="22" />
+      
+                                <Label text="Логін*:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="23" />
+              <MFXTextField fx:id="loginTextField" floatMode="DISABLED" maxWidth="1.7976931348623157E308" promptText="ivan_melnik" GridPane.columnIndex="1" GridPane.rowIndex="23" />
+              <Label fx:id="loginErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="24" />
+      
+                                <Label text="Пароль*:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="25" />
+              <MFXPasswordField fx:id="passwordPasswordField" floatMode="DISABLED" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="25" />
+              <Label fx:id="passwordErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="26" />
+      
+                                <HBox alignment="CENTER" spacing="5.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="27">
+                <children>
+                  <MFXButton fx:id="addEditButton" alignment="CENTER" contentDisplay="CENTER" onAction="#onAddEditButtonClick" text="Додати" />
+                  <MFXButton fx:id="editResetButton" managed="false" onAction="#onEditResetButtonClick" styleClass="outline-button" text="" visible="false">
+                    <graphic>
+                      <MFXFontIcon description="fas-xmark" />
+                    </graphic>
+                  </MFXButton>
+                </children>
+              </HBox>
+      
+                              </children>
+          </GridPane>
+         </content>
+      </ScrollPane>
+  </children>
+</HBox>

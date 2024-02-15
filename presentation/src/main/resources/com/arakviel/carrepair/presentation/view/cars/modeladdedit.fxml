@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXFilterComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.mfxresources.fonts.MFXFontIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" prefHeight="750.0" prefWidth="930.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.arakviel.carrepair.presentation.controller.car.ModelAddEditController">
+  <children>
+    <GridPane hgap="10.0" maxWidth="600.0" vgap="5.0" HBox.hgrow="ALWAYS">
+      <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" maxWidth="200.0" minWidth="-Infinity" prefWidth="200.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+            <RowConstraints valignment="CENTER" vgrow="NEVER" />
+            <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+      </rowConstraints>
+      <children>
+        <Label text="Бренд:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="0" />
+            <HBox spacing="10.0" GridPane.columnIndex="1">
+               <children>
+              <MFXFilterComboBox fx:id="brandComboBox" allowEdit="true" floatMode="ABOVE" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                  <MFXButton fx:id="removeBrandButton" maxHeight="1.7976931348623157E308" onAction="#onRemoveBrandButton" styleClass="outline-button" text="" textAlignment="CENTER">
+                     <graphic>
+                        <MFXFontIcon description="fas-xmark" textAlignment="CENTER" />
+                     </graphic>
+                  </MFXButton>
+               </children>
+            </HBox>
+        <Label fx:id="brandErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label layoutX="140.0" layoutY="210.0" text="Назва:" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+        <MFXTextField fx:id="modelTextField" floatMode="DISABLED" maxWidth="1.7976931348623157E308" promptText="Model S" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Label fx:id="modelErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+
+        <HBox alignment="CENTER" spacing="5.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+          <children>
+            <MFXButton fx:id="addEditButton" alignment="CENTER" contentDisplay="CENTER" onAction="#onAddEditButtonClick" text="Додати" />
+            <MFXButton fx:id="editResetButton" managed="false" onAction="#onEditResetButtonClick" styleClass="outline-button" text="" visible="false">
+              <graphic>
+                <MFXFontIcon description="fas-xmark" />
+              </graphic>
+            </MFXButton>
+          </children>
+        </HBox>
+
+        <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+            <Label layoutX="164.0" layoutY="17.0" text="щоб додати новий бренд, нажміть кнопку &quot;Enter&quot;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+      </children>
+    </GridPane>
+  </children>
+</HBox>

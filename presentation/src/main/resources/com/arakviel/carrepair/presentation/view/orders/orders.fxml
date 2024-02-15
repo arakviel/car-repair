@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import io.github.palexdev.materialfx.controls.MFXRectangleToggleNode?>
+<?import io.github.palexdev.mfxresources.fonts.MFXFontIcon?>
+<AnchorPane prefHeight="820.0" prefWidth="960.0" AnchorPane.bottomAnchor="0.0"
+            AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
+            xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.arakviel.carrepair.presentation.controller.order.OrderController">
+  <children>
+    <HBox layoutX="30.0" layoutY="30.0" prefWidth="930.0" spacing="15.0" AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <MFXRectangleToggleNode fx:id="menuItemView" onAction="#onMenuItemViewSelected"
+                                text="Перегляд">
+          <labelLeadingIcon>
+            <MFXFontIcon description="fas-table" size="12" />
+          </labelLeadingIcon>
+        </MFXRectangleToggleNode>
+        <MFXRectangleToggleNode fx:id="menuItemAddEdit" onAction="#onMenuItemAddEditSelected"
+                                text="Редагування">
+          <labelLeadingIcon>
+            <MFXFontIcon description="fas-pen-to-square" size="12" />
+          </labelLeadingIcon>
+        </MFXRectangleToggleNode>
+      </children>
+    </HBox>
+    <AnchorPane fx:id="contentPane" layoutX="15.0" layoutY="59.0" prefHeight="200.0"
+                prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+  </children>
+  <padding>
+    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+  </padding>
+</AnchorPane>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXCheckbox?>
+<?import io.github.palexdev.materialfx.controls.MFXFilterComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.mfxresources.fonts.MFXFontIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<HBox alignment="CENTER" prefHeight="750.0" prefWidth="930.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.arakviel.carrepair.presentation.controller.position.PositionAddEditController">
+  <children>
+    <GridPane hgap="10.0" maxWidth="700.0" vgap="5.0" HBox.hgrow="ALWAYS">
+      <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" maxWidth="200.0" minWidth="-Infinity" prefWidth="200.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints valignment="CENTER" vgrow="NEVER" />
+      </rowConstraints>
+      <children>
+        <Label text="Назва:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="0" />
+        <MFXTextField fx:id="nameTextField" floatMode="DISABLED" maxWidth="1.7976931348623157E308" promptText="Директор" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="nameErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+
+        <Label text="Опис:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+        <TextArea fx:id="descriptionTextArea" prefRowCount="8" promptText="Посада майстра по ремонту машин відповідає за проведення ремонтних робіт та технічне обслуговування автомобілів. Основні обов'язки майстра по ремонту машин включають діагностику технічних проблем, виявлення несправностей, розбирання та збирання автомобільних агрегатів, встановлення та налагодження запчастин, а також виконання ремонтних робіт згідно з встановленими стандартами та вимогами. Майстри по ремонту машин мають високу технічну кваліфікацію, розуміння роботи різних систем автомобіля та вміння працювати з ремонтним обладнанням та інструментами." wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label fx:id="descriptionErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+
+        <Label text="Валюта:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+        <MFXFilterComboBox fx:id="currencyComboBox" floatMode="ABOVE" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Label fx:id="currencyErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+        <Label text="Заробітня плата за годину:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+            <HBox spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <children>
+                  <MFXTextField fx:id="salaryPerHourWholePartTextField" floatMode="ABOVE" prefWidth="150.0" promptText="Ціла частина" />
+                  <MFXTextField fx:id="salaryPerHourDecimalPartTextField" floatMode="ABOVE" prefWidth="150.0" promptText="Дробна частина" />
+               </children>
+            </HBox>
+        <Label fx:id="salaryPerHourErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <MFXCheckbox fx:id="canEditUsersCheckBox" text="Може редагувати користувачів" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <MFXCheckbox fx:id="canEditSparesCheckBox" text="Може редагувати запчастини" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <MFXCheckbox fx:id="canEditClientsCheckBox" layoutX="220.0" layoutY="330.0" text="Може редагувати клієнтів" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <MFXCheckbox fx:id="canEditServicesCheckBox" layoutX="220.0" layoutY="361.0" text="Може редагувати послуги" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <MFXCheckbox fx:id="canEditOrdersCheckBox" layoutX="220.0" layoutY="392.0" text="Може редагувати замовлення" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <MFXCheckbox fx:id="canEditPayrollsCheckBox" layoutX="220.0" layoutY="424.0" text="Може редагувати заробітні плати" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+
+        <HBox alignment="CENTER" spacing="5.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="14">
+          <children>
+            <MFXButton fx:id="addEditButton" alignment="CENTER" contentDisplay="CENTER" onAction="#onAddEditButtonClick" text="Додати" />
+            <MFXButton fx:id="editResetButton" managed="false" onAction="#onEditResetButtonClick" styleClass="outline-button" text="" visible="false">
+              <graphic>
+                <MFXFontIcon description="fas-xmark" />
+              </graphic>
+            </MFXButton>
+          </children>
+        </HBox>
+      </children>
+    </GridPane>
+  </children>
+</HBox>

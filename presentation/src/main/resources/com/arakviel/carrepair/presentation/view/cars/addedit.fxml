@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXFilterComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.mfxresources.fonts.MFXFontIcon?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" prefHeight="750.0" prefWidth="930.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.arakviel.carrepair.presentation.controller.car.CarAddEditController">
+  <children>
+    <GridPane hgap="10.0" maxWidth="600.0" vgap="5.0" HBox.hgrow="ALWAYS">
+      <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" maxWidth="200.0" minWidth="-Infinity" prefWidth="200.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+            <RowConstraints valignment="CENTER" vgrow="NEVER" />
+      </rowConstraints>
+      <children>
+        <Label text="Номер:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="0" />
+        <MFXTextField fx:id="numberTextField" floatMode="DISABLED" maxWidth="1.7976931348623157E308" promptText="AB5678AA" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="numberErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+
+        <Label text="Рік випуску:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+        <MFXTextField fx:id="yearTextField" floatMode="DISABLED" maxWidth="1.7976931348623157E308" promptText="2020" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label fx:id="yearErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+
+        <Label text="Модель:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+        <MFXFilterComboBox fx:id="modelComboBox" floatMode="ABOVE" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Label fx:id="modelErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+
+        <Label text="Тип двигуна:" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+        <MFXFilterComboBox fx:id="engineTypeComboBox" floatMode="ABOVE" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <Label fx:id="engineTypeErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+
+        <Label layoutX="140.0" layoutY="210.0" text="Пробіг:" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+        <MFXTextField fx:id="mileageTextField" floatMode="DISABLED" maxWidth="1.7976931348623157E308" promptText="50000" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        <Label fx:id="mileageErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
+
+        <Label layoutX="170.0" layoutY="246.0" text="Колір:" GridPane.halignment="RIGHT" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+        <ColorPicker fx:id="colorPicker" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+        <Label fx:id="colorErrorLabel" managed="false" styleClass="error-label" text="error" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="11" />
+
+        <Label text="Оберіть декілька фотографій:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="12" />
+        <MFXButton fx:id="photoButton" onAction="#onPhotoButtonClick" prefHeight="26.0" prefWidth="53.0" text="..." GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <Label layoutX="48.0" layoutY="253.0" text="Для видалення, клацніть правою кнопкою мишки по фотографії." textFill="#696969" GridPane.columnIndex="1" GridPane.rowIndex="13">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+        <Pane fx:id="imagesContainer" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+        <Label fx:id="photoErrorLabel" managed="false" styleClass="error-label" text="error" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="15" />
+
+        <HBox alignment="CENTER" spacing="5.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="16">
+          <children>
+            <MFXButton fx:id="addEditButton" alignment="CENTER" contentDisplay="CENTER" onAction="#onAddEditButtonClick" text="Додати" />
+            <MFXButton fx:id="editResetButton" managed="false" onAction="#onEditResetButtonClick" styleClass="outline-button" text="" visible="false">
+              <graphic>
+                <MFXFontIcon description="fas-xmark" />
+              </graphic>
+            </MFXButton>
+          </children>
+        </HBox>
+
+      </children>
+    </GridPane>
+  </children>
+</HBox>

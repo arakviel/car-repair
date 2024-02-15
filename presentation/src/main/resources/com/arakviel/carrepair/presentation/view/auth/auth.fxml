@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="750.0" prefWidth="930.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.arakviel.carrepair.presentation.controller.AuthController">
+   <center>
+      <VBox maxHeight="300.0" maxWidth="300.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <MFXTextField fx:id="loginTextField" floatingText="Логін" maxWidth="1.7976931348623157E308" />
+            <MFXPasswordField fx:id="passwordPasswordField" floatingText="Пароль" maxWidth="1.7976931348623157E308" />
+            <MFXButton fx:id="signInButton" alignment="CENTER" buttonType="RAISED" maxWidth="1.7976931348623157E308" onAction="#onSignInButtonClick" text="Увійти" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

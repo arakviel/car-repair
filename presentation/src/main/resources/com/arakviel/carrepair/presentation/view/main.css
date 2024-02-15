@@ -1,0 +1,113 @@
+* {
+  -mfx-blue: #2196f3;
+  -mfx-charcoal: #445055;
+  -mfx-green: #4caf50;
+  -mfx-onyx: #353935;
+  -mfx-orange: #ff9800;
+  -mfx-purple: #7a0ed9;
+  -mfx-red: #EF6E6B;
+  -mfx-yellow: #FFEA00;
+
+
+  -mfx-text-he: rgba(0, 0, 0, 0.87); /* High Emphasis */
+  -mfx-text-me: rgba(0, 0, 0, 0.60); /* Medium Emphasis*/
+  -mfx-text-disabled: rgba(0, 0, 0, 0.38); /* Disabled */
+
+  -mfx-text: #16181a;
+
+  -common-gradient: linear-gradient(to right bottom, #c4008b, #d00085, #dc007f, #e60b79, #ef1872, #f5276b, #fa3564, #fe415e, #ff5158, #ff5f52, #ff6c4e, #ff794b);
+  -secondary-gradient: linear-gradient(to right bottom, #1ec400, #00bd3a, #00b654, #00ae67, #00a574, #00a280, #009e8a, #009a91, #009b9d, #009ba8, #009bb2, #009abb);
+}
+
+.main-pane {
+  -fx-font-family: "Tahoma";
+  -fx-font-size: 12px;
+  -fx-background-color: #FFFFFF;
+}
+
+.button {
+
+}
+
+.button:hover {
+  -fx-background-color: #f6f6f6;
+}
+
+.toggle-button {
+  -fx-border-width: 0.0;
+}
+
+.toggle-button:hover {
+  -fx-background-color: #f6f6f6;
+  -fx-cursor: hand;
+}
+
+#content-pane {
+  -fx-background-radius: 20px 0 0 0;
+  -fx-border-radius: 20px 0 0 0;
+  -fx-background-color: #F4F4F8;
+}
+
+.error-label {
+  -fx-font-size: 8;
+  -fx-text-fill: #ff6868!important;
+}
+
+.table-cell {
+  -fx-alignment: CENTER-LEFT;
+}
+
+.table-row-cell:selected {
+  -fx-background-color: #F4F4F8;
+}
+
+.table-view .column-header {
+  -fx-background-color: transparent;
+}
+
+.table-view .column-header-background {
+  -fx-background-color: #F4F4F8;
+}
+
+.table-view .column-header .label {
+  -fx-text-fill: -mfx-text!important;
+  -fx-font-weight: 400;
+}
+
+.mfx-text-field {
+  -fx-border-color: -secondary-gradient;
+}
+
+.label {
+  -fx-text-fill: -mfx-text;
+}
+
+
+.button {
+  -fx-cursor: hand;
+}
+
+.reset-button {
+  -fx-background-color: #ff6868;
+}
+
+.outline-button {
+  -fx-background-color: transparent;
+  -fx-border-color: -mfx-red;
+  -fx-border-radius: 3;
+
+  -fx-text-fill: -mfx-red;
+}
+
+.outline-button:hover,
+.outline-button:focused {
+  -fx-background-color: -mfx-red;
+  -fx-text-fill: white;
+}
+
+.scroll-pane {
+  -fx-background-color: transparent;
+  -fx-background: transparent;
+  -fx-border-color: transparent;
+  -fx-padding: 0;
+}
